@@ -1,0 +1,9 @@
+uuid: f95dd90b-2ba3-4a1e-93e0-8d7fc668f318
+langcode: en
+status: true
+dependencies: {  }
+name: 'Investor Issue'
+vid: investor_issue
+description: ''
+hierarchy: 2
+weight: 0

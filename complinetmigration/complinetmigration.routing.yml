@@ -1,0 +1,34 @@
+xmlparser.form:
+  path:  '/admin/xmlparser/form'
+  defaults:
+    _form: '\Drupal\complinetmigration\Form\xmlparser'
+  requirements:
+    _permission: 'administer content'
+notices.form:
+  path:  '/admin/noticesparser/form'
+  defaults:
+    _form: '\Drupal\complinetmigration\Form\noticesparser'
+    _title: 'Notices Parser'
+  requirements:
+    _permission: 'administer content'
+complinetxmltoarticles.form:
+  path:  '/admin/complinetxmltoarticles/form'
+  defaults:
+    _form: '\Drupal\complinetmigration\Form\complinetxmltoarticles'
+    _title: 'Complinet XML To Articles Parser'
+  requirements:
+    _permission: 'administer content'
+paragraphmigrations.form:
+  path:  '/admin/paragraphmigrations/form'
+  defaults:
+    _form: '\Drupal\complinetmigration\Form\paragraphmigrations'
+    _title: 'Drupal 7 Field Collections To Article Paragraphs Parser'
+  requirements:
+    _permission: 'administer content'
+csvparser.form:
+  path:  '/admin/csvparser/form'
+  defaults:
+    _form: '\Drupal\complinetmigration\Form\csvparser'
+    _title: 'Drupal 8 CSV Parser'
+  requirements:
+    _permission: 'administer content'

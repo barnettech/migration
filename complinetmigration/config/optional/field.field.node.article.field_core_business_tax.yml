@@ -1,0 +1,29 @@
+uuid: c2ac12f0-852d-42df-b81c-0308dd7b0f28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_core_business_tax
+    - node.type.article
+    - taxonomy.vocabulary.business_role
+id: node.article.field_core_business_tax
+field_name: field_core_business_tax
+entity_type: node
+bundle: article
+label: 'Core Business Role'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      business_role: business_role
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

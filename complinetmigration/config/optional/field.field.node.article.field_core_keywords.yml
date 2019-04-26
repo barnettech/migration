@@ -1,0 +1,19 @@
+uuid: 7337c60d-0725-4112-a62d-2a375638aca9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_core_keywords
+    - node.type.article
+id: node.article.field_core_keywords
+field_name: field_core_keywords
+entity_type: node
+bundle: article
+label: 'Core Keywords'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

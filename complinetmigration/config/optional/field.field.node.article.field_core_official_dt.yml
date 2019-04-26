@@ -1,0 +1,21 @@
+uuid: 487f7a11-f35c-4837-908c-7926b9f6e405
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_core_official_dt
+    - node.type.article
+  module:
+    - datetime
+id: node.article.field_core_official_dt
+field_name: field_core_official_dt
+entity_type: node
+bundle: article
+label: 'Award Date Official'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

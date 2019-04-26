@@ -1,0 +1,29 @@
+uuid: fd282e5e-6006-4bb1-a575-90c15e0d0ff5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_core_cert_cycle_tax
+    - node.type.article
+    - taxonomy.vocabulary.certification_cycle
+id: node.article.field_core_cert_cycle_tax
+field_name: field_core_cert_cycle_tax
+entity_type: node
+bundle: article
+label: 'Core Certification Cycle'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      certification_cycle: certification_cycle
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

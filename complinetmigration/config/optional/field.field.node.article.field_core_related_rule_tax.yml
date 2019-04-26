@@ -1,0 +1,29 @@
+uuid: d4bdf529-58e1-4ddd-a8d2-5053b327bc14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_core_related_rule_tax
+    - node.type.article
+    - taxonomy.vocabulary.related_rule
+id: node.article.field_core_related_rule_tax
+field_name: field_core_related_rule_tax
+entity_type: node
+bundle: article
+label: 'Core Related Rule'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      related_rule: related_rule
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

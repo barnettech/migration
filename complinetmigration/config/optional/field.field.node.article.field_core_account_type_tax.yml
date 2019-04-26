@@ -1,0 +1,21 @@
+uuid: 4c1ae1d3-f0f6-4c07-b5b4-226fc9b99dde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_core_account_type_tax
+    - node.type.article
+id: node.article.field_core_account_type_tax
+field_name: field_core_account_type_tax
+entity_type: node
+bundle: article
+label: 'Core Type of Account'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

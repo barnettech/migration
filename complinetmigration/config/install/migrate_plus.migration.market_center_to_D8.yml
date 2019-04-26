@@ -1,0 +1,47 @@
+# This migration demonstrates importing from a monolithic XML file.
+dependencies:
+    enforced:
+      module:
+        - complinetmigration
+id: market_center_to_D8
+label: Market Center Migration
+migration_group: finra_upgrade
+migration_tags:
+  - Drupal 7 import to D8
+source:
+  plugin: d7_node
+  node_type: market_center
+  key: d7finra
+  constants:
+    uid_root: 1
+    node_article: 'article'
+destination:
+  plugin: entity:node
+process:
+  # Hardcode the destination node type (bundle) as 'migrate_example_beer'.
+  id: nid
+  type:
+    plugin: default_value
+    default_value: article
+  title: title
+  field_mm_mcid: field_mm_mcid
+  field_mm_url:
+    plugin: iterator
+    source: field_mm_url
+    process:
+      uri: url
+      title: title
+      options: attributes
+  field_mm_comments:
+    plugin: iterator
+    source: field_mm_comments
+    process:
+      value: value
+      format: full_html
+  field_mm_internal_notes:
+    plugin: iterator
+    source: field_mm_internal_notes
+    process:
+      value: value
+      format: full_html
+migration_dependencies: {}

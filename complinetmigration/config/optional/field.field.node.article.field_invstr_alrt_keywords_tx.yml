@@ -1,0 +1,19 @@
+uuid: f86eab0c-5e3d-481e-b707-f2c68689f2ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_invstr_alrt_keywords_tx
+    - node.type.article
+id: node.article.field_invstr_alrt_keywords_tx
+field_name: field_invstr_alrt_keywords_tx
+entity_type: node
+bundle: article
+label: 'Investor Alert Keywords'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

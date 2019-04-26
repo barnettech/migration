@@ -1,0 +1,114 @@
+<?php
+use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\migrate\Plugin\MigrateSourceInterface;
+use Drupal\migrate\Row;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row().
+ */
+function fieldcollection_paragraphs_migration_migrate_upgrade_d7_node_news_release_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration)
+{
+  $values = $row->getSourceProperty('field_link_details');
+  $value_new = [];
+  if ($values) {
+    foreach ($values as $value) {
+      $value_new[] = ['item_id' => $value['value']];
+    }
+    $row->setSourceProperty('field_link_details', $value_new);
+  }
+}
+function fieldcollection_paragraphs_migration_migrate_upgrade_d7_node_notices_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration)
+{
+  $values = $row->getSourceProperty('field_link_details');
+  $value_new = [];
+  if ($values) {
+    foreach ($values as $value) {
+      $value_new[] = ['item_id' => $value['value']];
+    }
+    $row->setSourceProperty('field_link_details', $value_new);
+  }
+}
+function fieldcollection_paragraphs_migration_migrate_upgrade_d7_node_investor_alert_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration)
+{
+  $values = $row->getSourceProperty('field_link_details');
+  $value_new = [];
+  if ($values) {
+    foreach ($values as $value) {
+      $value_new[] = ['item_id' => $value['value']];
+    }
+    $row->setSourceProperty('field_link_details', $value_new);
+  }
+}
+function fieldcollection_paragraphs_migration_migrate_upgrade_d7_node_speech_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration)
+{
+  $values = $row->getSourceProperty('field_link_details');
+  $value_new = [];
+  if ($values) {
+    foreach ($values as $value) {
+      $value_new[] = ['item_id' => $value['value']];
+    }
+    $row->setSourceProperty('field_link_details', $value_new);
+  }
+}
+function fieldcollection_paragraphs_migration_migrate_upgrade_d7_node_industry_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration)
+{
+  $values = $row->getSourceProperty('field_link_details');
+  $value_new = [];
+  if ($values) {
+    foreach ($values as $value) {
+      $value_new[] = ['item_id' => $value['value']];
+    }
+    $row->setSourceProperty('field_link_details', $value_new);
+  }
+}
+function fieldcollection_paragraphs_migration_migrate_upgrade_d7_node_investor_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration)
+{
+  $values = $row->getSourceProperty('field_link_details');
+  $value_new = [];
+  if ($values) {
+    foreach ($values as $value) {
+      $value_new[] = ['item_id' => $value['value']];
+    }
+    $row->setSourceProperty('field_link_details', $value_new);
+  }
+}
+function fieldcollection_paragraphs_migration_migrate_upgrade_d7_node_appsupportdoc_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration)
+{
+  $values = $row->getSourceProperty('field_link_details');
+  $value_new = [];
+  if ($values) {
+    foreach ($values as $value) {
+      $value_new[] = ['item_id' => $value['value']];
+    }
+    $row->setSourceProperty('field_link_details', $value_new);
+  }
+}
+function fieldcollection_paragraphs_migration_migrate_upgrade_d7_node_arbmed_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration)
+{
+  $values = $row->getSourceProperty('field_link_details');
+  $value_new = [];
+  if ($values) {
+    foreach ($values as $value) {
+      $value_new[] = ['item_id' => $value['value']];
+    }
+    $row->setSourceProperty('field_link_details', $value_new);
+  }
+}
+function fieldcollection_paragraphs_migration_migrate_upgrade_d7_node_rule_filing_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration)
+{
+  $values = $row->getSourceProperty('field_link_details');
+  $value_new = [];
+  if ($values) {
+    foreach ($values as $value) {
+      $value_new[] = ['item_id' => $value['value']];
+    }
+    $row->setSourceProperty('field_link_details', $value_new);
+  }
+}
+/**
+ * Implements hook_form_alter() to set Draft as default moderation state if node is edited.
+ */
+/*function fieldcollection_paragraphs_migration_form_node_form_alter(&$form, FormStateInterface $form_state) {
+ $form['moderation_state']['widget'][0]['state']['#default_value'] = 'draft';
+} */

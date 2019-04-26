@@ -1,0 +1,9 @@
+uuid: 3ae650ec-d6b9-4386-a125-cb99c4410fde
+langcode: en
+status: true
+dependencies: {  }
+name: 'Rule Letter Category'
+vid: rule_letter_category
+description: null
+hierarchy: 0
+weight: 0
