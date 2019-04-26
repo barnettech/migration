@@ -1,9 +1,0 @@
-uuid: 02cbfb3b-129a-4c6f-847a-76bb56b43cde
-langcode: en
-status: true
-dependencies: {  }
-name: 'Investment Vehicle'
-vid: investment_vehicle
-description: ''
-hierarchy: 1
-weight: 0

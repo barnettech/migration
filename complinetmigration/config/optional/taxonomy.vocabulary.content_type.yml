@@ -1,9 +1,0 @@
-uuid: bc177d7f-09ae-4910-abb4-2c22078916eb
-langcode: en
-status: true
-dependencies: {  }
-name: 'Content Type'
-vid: content_type
-description: ''
-hierarchy: 1
-weight: 0

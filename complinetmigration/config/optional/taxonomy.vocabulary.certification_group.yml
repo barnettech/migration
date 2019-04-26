@@ -1,9 +1,0 @@
-uuid: 38daa21e-46f8-47fe-89b0-f6add5f8eace
-langcode: en
-status: true
-dependencies: {  }
-name: 'Certification Group'
-vid: certification_group
-description: null
-hierarchy: 0
-weight: 0

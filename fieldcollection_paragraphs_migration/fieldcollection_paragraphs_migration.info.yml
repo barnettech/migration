@@ -1,7 +1,0 @@
-name: Custom field collections to paragraphs Migration
-description: Custom migration module for migrating field collections to paragraphs from a Drupal 7 site.
-package: Migrations
-type: module
-core: 8.x
-dependencies:
-  - migrate
