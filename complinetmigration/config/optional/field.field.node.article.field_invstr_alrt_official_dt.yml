@@ -1,0 +1,21 @@
+uuid: 9d885678-b786-4a04-92b5-50058d669894
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_invstr_alrt_official_dt
+    - node.type.article
+  module:
+    - datetime
+id: node.article.field_invstr_alrt_official_dt
+field_name: field_invstr_alrt_official_dt
+entity_type: node
+bundle: article
+label: 'Investor Alert Official Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

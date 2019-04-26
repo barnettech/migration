@@ -1,0 +1,21 @@
+uuid: dfd58cfa-6412-4f9d-a71a-144c2d1d2a65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spch_loc_tx
+    - node.type.article
+  module:
+    - text
+id: node.article.field_spch_loc_tx
+field_name: field_spch_loc_tx
+entity_type: node
+bundle: article
+label: 'Speech Location'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

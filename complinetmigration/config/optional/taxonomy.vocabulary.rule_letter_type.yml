@@ -1,0 +1,9 @@
+uuid: 96d4fd16-6c12-44df-9f16-80a266a180c6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Rule Letter Type'
+vid: rule_letter_type
+description: null
+hierarchy: 0
+weight: 0

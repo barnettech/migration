@@ -1,0 +1,29 @@
+uuid: bab706e9-aa0a-4b40-809d-3119837ab5ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rule_letter_type_tax
+    - node.type.article
+    - taxonomy.vocabulary.rule_letter_type
+id: node.article.field_rule_letter_type_tax
+field_name: field_rule_letter_type_tax
+entity_type: node
+bundle: article
+label: 'Rule Letter Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      rule_letter_type: rule_letter_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: fe0f2931-d266-4dfe-a9d5-38665d534e9a
+langcode: en
+status: true
+dependencies: {  }
+id: field_link_details
+label: field_link_details
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

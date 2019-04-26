@@ -1,0 +1,20 @@
+uuid: 9ba0f7b9-3396-4824-9767-6c567fbc715f
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_core_content_type_tax
+field_name: field_core_content_type_tax
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

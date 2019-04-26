@@ -1,0 +1,50 @@
+uuid: 76e11b56-e1b9-4f74-9736-c03ceb63dad5
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_market_center
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: finra_upgrade
+label: 'Nodes (Market Center)'
+source:
+  plugin: d7_node
+  node_type: market_center
+process:
+  nid: tnid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  comment_node_market_center/0/status: comment
+  field_mm_comments:
+    plugin: get
+    source: field_mm_comments
+  field_mm_internal_notes:
+    plugin: get
+    source: field_mm_internal_notes
+  field_mm_mcid:
+    plugin: get
+    source: field_mm_mcid
+  field_mm_url:
+    plugin: field_link
+    source: field_mm_url
+destination:
+  plugin: 'entity:node'
+  default_bundle: market_center
+migration_dependencies: {}

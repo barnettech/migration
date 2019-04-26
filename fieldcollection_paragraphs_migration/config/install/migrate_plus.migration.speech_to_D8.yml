@@ -1,0 +1,199 @@
+# This migration demonstrates importing from a monolithic XML file.
+dependencies:
+    enforced:
+      module:
+        - d7custommigration
+id: speech_to_D8
+label: 'Speech Migration'
+migration_group: migrate_drupal_7
+migration_tags:
+  - Drupal 7 import to D8
+source:
+  plugin: d7_node
+  node_type: speech
+  key: d7finra
+  constants:
+    uid_root: 1
+    node_article: 'article'
+    original_content_type_tid: 49291
+destination:
+  plugin: entity:node
+  default_bundle: article
+process:
+  # Hardcode the destination node type (bundle) as 'migrate_example_beer'.
+  nid: tnid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  id: nid
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  type:
+    plugin: default_value
+    default_value: article
+  title: title
+  body:
+    plugin: iterator
+    source: body
+    process:
+      value: value
+      summary: summary
+      format:
+        plugin: default_value
+        default_value: full_html
+  field_core_short_title_tx:
+    plugin: get
+    source: field_core_short_title_tx
+  field_core_audience_tax:
+    plugin: sub_process
+    source: field_core_audience_tax
+    process:
+      target_id: tid
+  field_core_business_tax:
+    plugin: sub_process
+    source: field_core_business_tax
+    process:
+      target_id: tid
+  field_core_cert_cycle_tax:
+    plugin: sub_process
+    source: field_core_cert_cycle_tax
+    process:
+      target_id: tid
+  field_core_cert_group_tax:
+    plugin: sub_process
+    source: field_core_cert_group_tax
+    process:
+      target_id: tid
+  field_core_cert_due_dt:
+    plugin: sub_process
+    source: field_core_cert_due_dt
+    process:
+     value:
+       plugin: format_date
+       from_format: 'Y-m-d H:i:s'
+       to_format: 'Y-m-d'
+       source: value
+  field_core_content_type_tax:
+    plugin: sub_process
+    source: field_core_content_type_tax
+    process:
+      target_id: tid
+  field_original_content_type: constants/original_content_type_tid
+  field_core_invest_issue_tax:
+    plugin: sub_process
+    source: field_core_invest_issue_tax
+    process:
+      target_id: tid
+  field_core_invest_veh_tax:
+    plugin: sub_process
+    source: field_core_invest_veh_tax
+    process:
+      target_id: tid
+  field_core_executive_tax:
+    plugin: sub_process
+    source: field_core_executive_tax
+    process:
+      target_id: tid
+  field_core_related_rule_tax:
+    plugin: sub_process
+    source: field_core_related_rule_tax
+    process:
+      target_id: tid
+  field_core_rule_reg_tax:
+    plugin: sub_process
+    source: field_core_rule_reg_tax
+    process:
+      target_id: tid
+  field_core_desktop_image:
+    plugin: sub_process
+    source: field_core_desktop_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_core_official_dt:
+    plugin: iterator
+    source: field_core_official_dt
+    process:
+      value:
+        plugin: substr
+        source: value
+        start: 0
+        length: 10
+  field_related_link_details:
+      -
+        plugin: skip_on_empty
+        method: process
+        source: field_link_details
+      -
+        plugin: migration_lookup
+        migration: d7_field_collection_link_details
+        no_stub: true
+      -
+        plugin: iterator
+        process:
+          target_id: '0'
+          target_revision_id: '1'
+  field_spch_speaker_tax:
+    plugin: sub_process
+    source: field_spch_speaker_tax
+    process:
+      target_id: tid
+  field_spch_loc_tx:
+    plugin: iterator
+    source: field_spch_loc_tx
+    process:
+      value: value
+      format: full_html
+  field_spch_title:
+    plugin: iterator
+    source: field_spch_title
+    process:
+      value: value
+      format: full_html
+  field_core_keywords:
+    plugin: get
+    source: field_core_keywords
+  field_core_topic:
+    plugin: merge
+    source:
+      - '@field_core_audience_tax'
+      - '@field_core_business_tax'
+      - '@field_core_invest_veh_tax'
+      - '@field_core_rule_reg_tax'
+  field_link_details:
+      -
+        plugin: skip_on_empty
+        method: process
+        source: field_link_details
+      -
+        plugin: migration_lookup
+        migration: d7_field_collection_link_details
+        no_stub: true
+      -
+        plugin: iterator
+        process:
+          target_id: '0'
+          target_revision_id: '1'
+  uid:
+    plugin: default_value
+    default_value: 1
+  sticky:
+    plugin: default_value
+    default_value: 0
+  'body/value': content
+  'body/format':
+    plugin: default_value
+    default_value: full_html
+migration_dependencies: {}

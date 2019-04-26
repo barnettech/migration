@@ -1,0 +1,9 @@
+uuid: a24201f1-48a9-453e-8b69-dd7fdaebb0af
+langcode: en
+status: true
+dependencies: {  }
+name: 'Related Rule'
+vid: related_rule
+description: ''
+hierarchy: 0
+weight: 0

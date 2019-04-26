@@ -1,0 +1,9 @@
+uuid: 42043149-c0e2-4f04-8dcd-c9e7ff40c87e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Industry Issue'
+vid: rule_or_regulation
+description: ''
+hierarchy: 1
+weight: 0

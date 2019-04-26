@@ -1,0 +1,31 @@
+uuid: 873c3434-afe2-494e-9677-27a580fa6b9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_link_details
+    - node.type.article
+    - paragraphs.paragraphs_type.field_link_details
+  module:
+    - entity_reference_revisions
+id: node.article.field_related_link_details
+field_name: field_related_link_details
+entity_type: node
+bundle: article
+label: 'Related Link Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      field_link_details: field_link_details
+    target_bundles_drag_drop:
+      field_link_details:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

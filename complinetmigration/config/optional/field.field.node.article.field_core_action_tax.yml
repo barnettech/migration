@@ -1,0 +1,21 @@
+uuid: d573b0e2-bdf2-475a-983f-117ed29af175
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_core_action_tax
+    - node.type.article
+id: node.article.field_core_action_tax
+field_name: field_core_action_tax
+entity_type: node
+bundle: article
+label: 'Core Disciplinary Action'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference
